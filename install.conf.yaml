@@ -11,5 +11,12 @@
 - create:
   - ~/Code
 
-# - shell:
+- shell:
 #  - [git submodule update --init --recursive, Installing submodules]
+   -
+    command: echo "Hey You Guys!"
+    stdin: true
+    stdout: true
+    stderr: true
+   - sleep 2
+   - ./test.zsh
