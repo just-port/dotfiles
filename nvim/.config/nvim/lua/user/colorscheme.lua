@@ -1,8 +1,7 @@
 vim.cmd [[
 try
-  colorscheme tokyonight
+  colorscheme sonokai
 catch /^Vim\%((\a\+)\)\=:E185/
   colorscheme default
- darkplus set background=dark
 endtry
 ]]

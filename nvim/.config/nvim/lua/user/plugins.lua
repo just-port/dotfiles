@@ -56,9 +56,14 @@ return packer.startup(function(use)
 	use("lewis6991/impatient.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("goolord/alpha-nvim")
-	use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
+	-- use("antoinemadec/FixCursorHold.nvim") -- This is needed to fix lsp doc highlight
 	use("folke/which-key.nvim")
-	use("tpope/sleuth.vim")
+	use("tpope/vim-sleuth")
+	use("vimwiki/vimwiki")
+	use({
+		"knubie/vim-kitty-navigator",
+		run = "cp ./*.py ~/.config/kitty/",
+	})
 	use({
 		"max397574/better-escape.nvim",
 		config = function()
@@ -74,8 +79,9 @@ return packer.startup(function(use)
 	})
 
 	-- Colorschemes
-	-- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
-	use("folke/tokyonight.nvim")
+	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
+	use("tjdevries/colorbuddy.vim")
+	use("sainnhe/sonokai")
 	use("lunarvim/darkplus.nvim")
 
 	-- cmp plugins
@@ -104,6 +110,9 @@ return packer.startup(function(use)
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
 	})
+	use("nvim-treesitter/nvim-treesitter-textobjects")
+	use("nvim-treesitter/playground")
+	use("nvim-treesitter/nvim-tree-docs")
 	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- Git
